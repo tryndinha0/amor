@@ -52,11 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
         contador++
         if (contador === 1) {
             sumirBotao()
-            topo.innerText = "Ok, então vou te ajudar!"
+            topo.innerText = "Ok, então vou te ajudar!!!"
+            imagem.src= 'https://media.tenor.com/d2nnuVMvPbcAAAAi/milk-and-mocha-milk-and-mocha-bear.gif'
             setTimeout(function () {
                 topo.innerText = "Sabe que sempre pode contar comigo né?"
                 modificarBotao()
-            }, 0000);
+            }, 3000);
         } else if (contador === 2) {
             topo.innerText = 'Eu te amo TANTO TANTO que fiz essa lista de coisas que eu ADORO em você'
             imagem.src = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3g3ZzAwanMzOTZoMnIxb21hd2pkdzZqcnUwN29sZGhmazNpcndjdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vFKqnCdLPNOKc/giphy.gif'
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             // Criar opções
-            let coisas = Array.from({ length: 50 }, (_, i) => `Coisa ${i + 1}`);
+            let coisas = Array.from({ length: 60 }, (_, i) => `Coisa ${i + 1}`);
             coisas.forEach(opcao => {
                 let option = document.createElement("option");
                 option.value = opcao.toLowerCase().split(' ').join('')
@@ -113,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Criar o elemento <p>
             let p = document.createElement("p");
             p.id = "meuParagrafo";
-            p.textContent = "Lorem ipsum dolor sit amet. Qui ipsum nobis ut nesciunt facere sit quod reiciendis. Hic possimus blanditiis At ducimus cumque et iusto quas ut inventore delectus est nulla ratione rem quibusdam exercitationem! Et aliquam recusandae et dolorem quia aut obcaecati dolorem quo doloribus dolor?";
+            p.textContent = "Vai aparecer aqui!";
             p.style.color = ' #CBEEF3'
             p.style.textAlign = 'center'
             p.style.marginTop = '2%'
@@ -123,56 +124,66 @@ document.addEventListener("DOMContentLoaded", function () {
             mensagem.appendChild(p);
 
             const textos = {
-                coisa1: "Você escolheu a Coisa 1! <br>😃",
-                coisa2: "Você escolheu a Coisa 2!",
-                coisa3: "Você escolheu a Coisa 3!",
-                coisa4: "Você escolheu a Coisa 4!",
-                coisa5: "Você escolheu a Coisa 5!",
-                coisa6: "Você escolheu a Coisa 6!",
-                coisa7: "Você escolheu a Coisa 7!",
-                coisa8: "Você escolheu a Coisa 8!",
-                coisa9: "Você escolheu a Coisa 9!",
-                coisa10: "Você escolheu a Coisa 10!",
-                coisa11: "Você escolheu a Coisa 11!",
-                coisa12: "Você escolheu a Coisa 12!",
-                coisa13: "Você escolheu a Coisa 13!",
-                coisa14: "Você escolheu a Coisa 14!",
-                coisa15: "Você escolheu a Coisa 15!",
-                coisa16: "Você escolheu a Coisa 16!",
-                coisa17: "Você escolheu a Coisa 17!",
-                coisa18: "Você escolheu a Coisa 18!",
-                coisa19: "Você escolheu a Coisa 19!",
-                coisa20: "Você escolheu a Coisa 20!",
-                coisa21: "Você escolheu a Coisa 21!",
-                coisa22: "Você escolheu a Coisa 22!",
-                coisa23: "Você escolheu a Coisa 23!",
-                coisa24: "Você escolheu a Coisa 24!",
-                coisa25: "Você escolheu a Coisa 25!",
-                coisa26: "Você escolheu a Coisa 26!",
-                coisa27: "Você escolheu a Coisa 27!",
-                coisa28: "Você escolheu a Coisa 28!",
-                coisa29: "Você escolheu a Coisa 29!",
-                coisa30: "Você escolheu a Coisa 30!",
-                coisa31: "Você escolheu a Coisa 31!",
-                coisa32: "Você escolheu a Coisa 32!",
-                coisa33: "Você escolheu a Coisa 33!",
-                coisa34: "Você escolheu a Coisa 34!",
-                coisa35: "Você escolheu a Coisa 35!",
-                coisa36: "Você escolheu a Coisa 36!",
-                coisa37: "Você escolheu a Coisa 37!",
-                coisa38: "Você escolheu a Coisa 38!",
-                coisa39: "Você escolheu a Coisa 39!",
-                coisa40: "Você escolheu a Coisa 40!",
-                coisa41: "Você escolheu a Coisa 41!",
-                coisa42: "Você escolheu a Coisa 42!",
-                coisa43: "Você escolheu a Coisa 43!",
-                coisa44: "Você escolheu a Coisa 44!",
-                coisa45: "Você escolheu a Coisa 45!",
-                coisa46: "Você escolheu a Coisa 46!",
-                coisa47: "Você escolheu a Coisa 47!",
-                coisa48: "Você escolheu a Coisa 48!",
-                coisa49: "Você escolheu a Coisa 49!",
-                coisa50: "Você escolheu a Coisa 50! <br> <img src='https://media1.tenor.com/m/W1uD-aY2H3MAAAAC/milk-fat.gif' style='height:50px;'>"
+                coisa1: "Eu amo a sua risada e como você fica quando nossos amigos falam ou fazem bobeiras",
+                coisa2: "Eu amo como você se cuida e não deixa nada passar",
+                coisa3: "Eu amo a confiança que tem por si mesma e como consegue transmitir isso aos outros",
+                coisa4: "Eu amo saber que você é incrivelmente forte <br> Você não deve falar, mas sinto que carrega muitos problemas ",
+                coisa5: "Eu amo a sua admiração por praia. Sonho um dia a gente curtir uma juntos!!",
+                coisa6: "Eu amo como o seu irmão te pertubaKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+                coisa7: "Eu amo o fato que você escuta aquelas músicas relaxantes para estudar ou dormir",
+                coisa8: "Eu amo a nossa primeira e, por enquanto única, foto!! <br><br> Tirada no meu aniversário ",
+                coisa9: "Eu amo o nosso flerte 💋<br><br> As vezes é brincadeira, ou não rsrsrs <br><br> Não dá pra saber",
+                coisa10: "Eu sou apaixonado no seu cabelo, ele é tão lindo <br> Você cuida muito bem dele! ",
+                coisa11: "Eu amo o fato de imaginar você sendo uma pessoa bem sucedida e com os sonhos realizados <br>Vou te ajudar nisso ok??",
+                coisa12: "Eu amo o nosso foguinho do Tik Tok <br> <br> EU NÃO ACEITO TER SIDO BANIDO, PERDEMOS UM DE QUASE 100 DIAS",
+                coisa13: "Eu amo aquele audio que você me humilhouKKKKKKKKKKKKKKKKKK <br> Acho muito engraçado e até hoje escuto (bem que voce podia renovar ele!)",
+                coisa14: "Eu amo o seu cheirinho <br> <br> COMO PODE EXISTIR ALGUEM TAO CHEIROSO AAAAAAAAAAAAAAA",
+                coisa15: "Eu amo a sua inteligência, não só a inteligência acadêmica <br> Mas também a cultural e emocional",
+                coisa16: "Eu amo como você sempre me ajuda e me escuta com todo amor quando estou triste 😥",
+                coisa17: "Eu amo o delineado que você faz sempre que sai.",
+                coisa18: "Eu amo jogar com você, é muito bom, tranquilizante e engraçado KKKKKKKKK",
+                coisa19: "Eu amo o fato que, mesmo a gente se conhecendo a dois anos, nos vemos apenas quando nossos amigos saem <br><br> KKKKKKKKKKKKKKK",
+                coisa20: "Eu amo que no Stardew Valley você adora construir várias fazendas em vez de focar em uma",
+                coisa21: "Eu amo te abraçar, queria fazer isso durante MUITO tempo",
+                coisa22: "Eu amo fazer qualquer coisa quando estamos juntos <br><br> Apenas estar com você faz o meu mês",
+                coisa23: "Eu amo quando você se cansa das brincadeiras do Will e retribui na mesma moeda<br>KKKKKKKKKKKKK",
+                coisa24: "Eu amo que você me ensinou a lavar o cabelo corretamennte <br> Significou muito pra mim, você fez eu amar meu cabelo <br> Lavo da mesma maneira até hoje!  ",
+                coisa25: "Eu amo a sua paixão pelas plantas e como sua casa é rodeada por elas",
+                coisa26: "Eu amo que o seus gêneros musicais, assim como os meus, não são limitados a poucos estilos <br> Você escuta MUITA coias diferente!!!",
+                coisa27: "Eu amo quando você responde alguma pergunta SUPER IDIOTA que eu faço",
+                coisa28: "Eu amo como você se mantém (ou tenta) ser otimista na medida do possível",
+                coisa29: "Eu amo quando você demonstra qualquer afeto por mim<br> Eu AMO MUITO, faz muita diferença e mexe comigo",
+                coisa30: "Eu AMO quando você fala dos seus livros com os audios enormes <br> Eu escuto e converso com o maior prazer, sabia?",
+                coisa31: "Eu amo a maneira como se veste, pra mim qualquer coisa que você coloca fica EXTREMAMENTE INCRÍVEL",
+                coisa32: "Eu amo quando você fala de um caso criminal bem específico KKKKKKKKK",
+                coisa33: "Eu amo como você dá tudo de si para a faculdade, nos projetos e tudo mais <br> <br>",
+                coisa34: "Eu amo o primeiro beijo na bocecha que você me deu, não esqueço nunca <br> (eu surtei por dentro) ",
+                coisa35: "Eu amo quando me recomenda alguma música ou quando debatemos sobre algum album/artista ",
+                coisa36: "Eu amo quando veio no meu aniversário e a gente passou a noite jogando juntos com a Fabi e Maria<br><br>Espero que tenha gostado!! Talvez tenha mais desses dias",
+                coisa37: "Eu amo o fato que no primeiro período da faculdade você conseguiu INIMIGOS KKKKKKKKKKKKKK",
+                coisa38: "Eu amo que quando nos conhecemos eu perguntei sobre as minhas terapias <br> Você me incentivou a ficar e foi transformador pra mim, não sei o que seria de mim sem elas",
+                coisa39: "Eu amo quando você me manda vídeos, memes ou notícias pra mim e fala sobre isso",
+                coisa40: "Eu AMO o seu sorriso cara!<br><br>Ele é encantador!!!",
+                coisa41: "Eu amo conversar com você sobre espiritualidade, por exemplo: <br> Vida após a morte, numerologia ou qualquer teoria da conspiração",
+                coisa42: "Eu amo o seu humor, você é MUITO cronicamente onlineKKKKKKKKKK",
+                coisa43: "Eu amo a foto que a Tia Rita tirou da gente com o seu irmão quando eu estava na sua casa",
+                coisa44: "Eu amo as suas filhas (Mel e Flor) e como você tem o maior carinho do mundo por elas",
+                coisa45: "Eu amo como o fato de ter você na aminha vida já me inspira a muita coisa <br><br> (inclusive a ter construído isso)",
+                coisa46: "Eu AMO aquela palha italiana que fez no fim do terceirão <br><br> (faz mais pofavo😭)",
+                coisa47: "Eu amo ver você se esforçando pra tirar habilitação <br>Quando tiver motorizada me leva pra sair hein!!!KKKKKKKKK",
+                coisa48: "Eu amo dar boa noite quase que diariamente pra você mesmo não sabendo se você gosta ou se faz diferença",
+                coisa49: "Eu amo o seu rosto, ele é tão perfeito<br> Não costumo olhar porque não sou muito fã de contato visual, mas vou mudar isso!!",
+                coisa50: "Eu amo que você sempre manda algo engraçado <br>quando eu sumo e falo pra não sentir saudades de mim<br> (Você sente mesmo saudade??)",
+                coisa51: "Eu amo quando tenho algum papo ou nerdice pra falar e você presta total atenção",
+                coisa52: "Eu amo como a gente divide o mesmo neurônio e pensamos a mesma coisaKKKKKKKKKKKKK",
+                coisa53: "Eu amo a sua voz, ela é tão bonita e causa uma sensação de paz maravilhosa",
+                coisa54: "Eu amo quando você faz uma piada ou qualquer bobeira KKKKKKKKKKKKKKKKKKKK <br> Você tira de mim uma risada sincera",
+                coisa55: "Eu amo que você perdia em TUDO pra mim no It Takes Two <br><br> (Você claramente roubava no cabo de guerra)",
+                coisa56: "Eu amo quando você faz algo legal e vem compartilhar comigo <br> (Eu fico muito orgulhoso de você, sabia?)",
+                coisa57: "Eu AMO o seu corpo. De verdade!!!!<br>Eu sou encantado nele e aprecio cada canto, pois ele faz parte de você e conta sua história",
+                coisa58: "Eu amo lembrar de você<br>Seja ouvindo o barulho do trem, escutando uma música, vendo um vídeo...",
+                coisa59: "Eu amo quando mando um vídeo meu tocando guitarra e você me elogia<br> Eu acho que sou bem medíocre, mas se a rainha não acha...",
+                coisa60: "Eu amo quando vejo você por algum story ou alguma foto"
             };
             function mudarTexto() {
                 var opcaoSelecionada = select.value;
